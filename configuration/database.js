@@ -4,7 +4,7 @@ const config = require("./config")
 
 exports.connectToDb = ()=> {
 
-    const url = `mongodb+srv://mario2206:${config.dbPassword}@cluster0.aqxcu.mongodb.net/${config.dbName}?retryWrites=true&w=majority`
+    const url = `mongodb+srv://${config.username}:${config.dbPassword}@cluster0.aqxcu.mongodb.net/${config.dbName}?retryWrites=true&w=majority`
 
     mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology : true, useFindAndModify : false })
 
