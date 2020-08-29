@@ -13,14 +13,14 @@ router.use((req, res, next) => {
     next()
 })
 
-router.get("/read/:id",getController.getById)
+router.get("/:id",getController.getById)
 
-router.get("/read-all", getController.getAll)
+router.get("", getController.getAll)
 
-router.post("/create", postController.create)
+router.post("", postController.create)
 
-router.put("/update/:id", updateController.update)
+router.put("/:id", updateController.update)
 
-router.delete("/delete/:id", deleteController.delete)
+router.delete("/:id", deleteController.delete)
 
 module.exports = router
